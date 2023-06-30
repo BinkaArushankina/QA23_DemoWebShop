@@ -1,5 +1,6 @@
 package com.WebShops.tests;
 import com.WebShop.model.User;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 
 public class RegistrationTests extends TestBase{
@@ -13,6 +14,8 @@ public class RegistrationTests extends TestBase{
 
         app.getUser().fillLoginRegistrationForm(new User().setEmail("arusha@gmail.com").setPassword("aaaaaaa"));
         app.getUser().clickOnLoginRegistrationButton();
+
+        Assert.assertTrue(app.getHeader().isSignOutButtonPresent());
     }
 
 
