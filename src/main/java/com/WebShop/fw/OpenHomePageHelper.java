@@ -9,6 +9,6 @@ public class OpenHomePageHelper extends BaseHelper{
     }
 
     public boolean isHomeComponentPresent() {
-        return isElementPresent(By.xpath("//h2[text()='Welcome to our store']"));
+        return isElementPresent(By.cssSelector(".topic-html-content-title"));
     }
 }
